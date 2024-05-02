@@ -1,5 +1,5 @@
 - name: Testing variables inside inventory.ini file
-  hosts: web #defined localhost2 group and vars inside inventory.ini and that worked too...
+  hosts:  #defined localhost2 group and vars inside inventory.ini and that worked too...
   tasks:
   - name: Print info at task level
     vars:
