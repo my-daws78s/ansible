@@ -4,10 +4,10 @@
     WISHES: Morning from PLAY variable.
   #vars_files:
   #- vars.yaml
-  vars_prompt:
-  - name: WISHES
-    prompt: Pls enter your Wishes
-    private: false
+  #vars_prompt:
+  #- name: WISHES
+  #  prompt: Pls enter your Wishes
+  #  private: false
   tasks:
   - name: Test inside Task level
   # vars:
@@ -19,4 +19,5 @@
   # 1. Testing-from-Arg-level
   # 2. Morning from TASK variable
   # 3. Morning from VARS FILE
-  # 4. 
+  # 4. Morning from PROMPT
+  # 5. 
