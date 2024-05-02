@@ -8,3 +8,17 @@
   - name: Prints information just from play level by default.
     ansible.builtin.debug:
       msg: "Hi we are doing a Course on {{Course}}, Trainer is: {{Trainer}}, Duration is: {{Duration}}"
+
+#Output:
+
+# [ ec2-user@ip-172-31-28-238 ~/ansible ]$ ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 04-variables.yaml
+
+# PLAY [variables defined at play level] ***********************************************************************************************
+
+# TASK [Gathering Facts] ***************************************************************************************************************
+# ok: [172.31.21.180]
+
+# TASK [Prints information just from play level by default.] ***************************************************************************
+# ok: [172.31.21.180] => {
+#     "msg": "Hi we are doing a Course on DevOps and AWS, Trainer is: Siva, Duration is: 120 weeks"
+# }
