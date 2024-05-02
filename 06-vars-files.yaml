@@ -1,7 +1,7 @@
 - name: Usage of Vars file at PLAY level
   hosts: web
-  vars:
-    vars.yaml
+  vars_files:
+  - vars.yaml
   tasks:
     - name: "Inside TASK level"
       vars:
