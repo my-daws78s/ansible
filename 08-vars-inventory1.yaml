@@ -1,22 +1,23 @@
 - name: Testing variables inside inventory.ini file
-  hosts: web #defined localhost2 group and vars inside inventory.ini and that worked too...
+  hosts: localhost #while just giving localhost, we dont need remote instance on.
   tasks:
   - name: Print info at task level
     vars:
       Timings: "7.15AM"
     ansible.builtin.debug:
-      msg: "Course is: {{Course}}, Trainer is: {{Trainer}}, Duration is: {{Duration}}, Timings are: {{Timings}}"
+      #msg: "Course is: {{Course}}, Trainer is: {{Trainer}}, Duration is: {{Duration}}, Timings are: {{Timings}}"
+      msg: "{{Timings}}"
 
 
 #Output:
+
 # [ ec2-user@ip-172-31-28-238 ~/ansible ]$ ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 08-vars-inventory.yaml
 
 # PLAY [Testing variables inside inventory.ini file] ***********************************************************************************
 
 # TASK [Gathering Facts] ***************************************************************************************************************
-# ok: [172.31.21.180]
+# ok: [localhost]
 
 # TASK [Print info at task level] ******************************************************************************************************
-# ok: [172.31.21.180] => {
-#     "msg": "Course is: Devops, Trainer is: Siva, Duration is: 3months, Timings are: 7.15AM"
-# }
+# ok: [localhost] => {
+#     "msg": "7.15AM"
