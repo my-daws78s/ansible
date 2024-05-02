@@ -3,7 +3,7 @@
   vars:
     Trainer: "Siva"
     Duration: "120 weeks"
-    Course: "Devops and AWS"
+    Course: "DevOps and AWS"
   tasks:
   - name: Print Information
     ansible.builtin.debug:
