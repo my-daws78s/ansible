@@ -10,10 +10,10 @@
     private: false
   tasks:
   - name: Test inside Task level
-  #   vars:
-  #     WISHES: Morning from TASK variable
-     ansible.builtin.debug:
-       msg: "{{WISHES}}"
+  # vars:
+  #   WISHES: Morning from TASK variable
+    ansible.builtin.debug:
+      msg: "{{WISHES}}"
 
   #Preference:
   # 1. Testing-from-Arg-level
