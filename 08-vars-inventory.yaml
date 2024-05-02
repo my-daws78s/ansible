@@ -1,5 +1,5 @@
 - name: Testing variables inside inventory.ini file
-  hosts: localhost2
+  hosts: web
   tasks:
   - name: Print info at task level
     vars:
