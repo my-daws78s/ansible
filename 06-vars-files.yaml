@@ -3,8 +3,8 @@
   vars_files:
   - vars.yaml
   tasks:
-    - name: "Inside TASK level"
+    - name: Inside TASK level
       vars:
         DURATION: "120 hours"
-      debug.builtin.module:
+      ansible.builtin.module:
         msg: "Course: {{Course}}, Trainer: {{Trainer}}"
