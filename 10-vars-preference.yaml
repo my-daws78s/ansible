@@ -1,7 +1,7 @@
 - name: Testing variable preference at Play/Task/Arg/Var/Varfile/Inventory/Prompt levels
   hosts: localhost
-  vars:
-    WISHES: Morning from PLAY variable.
+  #vars:
+  #  WISHES: Morning from PLAY variable.
   #vars_files:
   #- vars.yaml
   #vars_prompt:
@@ -20,4 +20,5 @@
   # 2. Morning from TASK variable
   # 3. Morning from VARS FILE
   # 4. Morning from PROMPT
-  # 5. 
+  # 5. Morning from PLAY variable.
+  # 6. 
