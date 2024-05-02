@@ -14,7 +14,7 @@
   tasks:
   - name: Printing all data types assigned.
     ansible.builtin.debug:
-      msg: "COURSE: {{COURSE}}, \n TOOLS: {{TOOLS}}, \n Experience is: {{Experience}}, \n Real_Project: {{Real_Project}}"
+      msg: "COURSE: {{COURSE}}, TOOLS: {{TOOLS}}, Experience is: {{Experience}}, Real_Project: {{Real_Project}}"
 
 #Output:
 
