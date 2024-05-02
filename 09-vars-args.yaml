@@ -3,4 +3,4 @@
   tasks:
   - name: Variable testing at task level
     ansible.builtin.debug:
-      msg: "Hello {{Text1}} , Good {{Text2}} ."
+      msg: "Hello {{Text1}}, Good {{Text2}}."
