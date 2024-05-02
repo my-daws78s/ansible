@@ -8,12 +8,12 @@
   - name: WISHES
     prompt: Pls enter your Wishes
     private: false
-  # tasks:
-  # - name: Test inside Task level
+  tasks:
+  - name: Test inside Task level
   #   vars:
   #     WISHES: Morning from TASK variable
-  #   ansible.builtin.debug:
-  #     msg: "{{WISHES}}"
+     ansible.builtin.debug:
+       msg: "{{WISHES}}"
 
   #Preference:
   # 1. Testing-from-Arg-level
