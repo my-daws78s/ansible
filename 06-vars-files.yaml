@@ -6,5 +6,5 @@
   - name: Inside TASK level
     vars:
       DURATION: "120 hours"
-    ansible.builtin.module:
+    ansible.builtin.debug:
       msg: "Course: {{Course}}, Trainer: {{Trainer}}"
