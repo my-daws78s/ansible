@@ -14,5 +14,18 @@
   tasks:
   - name: Printing all data types assigned.
     ansible.builtin.debug:
-      msg: "COURSE: {{COURSE}}, TOOLS: {{TOOLS}}, Experience is: {{Experience}}, Real_Project: {{Real_Project}}"
+      msg: "COURSE: {{COURSE}}, \nTOOLS: {{TOOLS}}, \nExperience is: {{Experience}}, \nReal_Project: {{Real_Project}}"
 
+#Output:
+
+# [ ec2-user@ip-172-31-26-192 ~/ansible ]$ ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 11-datatypes.yaml
+
+# PLAY [Testing Datatypes] *************************************************************************************************************
+
+# TASK [Gathering Facts] ***************************************************************************************************************
+# ok: [localhost]
+
+# TASK [Printing all data types assigned.] *********************************************************************************************
+# ok: [localhost] => {
+#     "msg": "COURSE: DevOps, TOOLS: ['Dockers', 'K8s', 'Terraform'], Experience is: {'Dockers': 2, 'K8s': 1, 'Terraform': 3}, Real_Project: True"
+# }
