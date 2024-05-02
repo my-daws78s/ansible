@@ -5,14 +5,14 @@
     Trainer: "Siva"
   
   tasks: 
-  
-  - name: Principle of Overriding
+
+  - name: Principle of Overriding, considering variables from TASK level itself.
     vars:
       Course: "Terraform"
       Trainer: "Murali"
     ansible.builtin.debug:
       msg: "Ongoing Course: {{Course}} with Trainer: {{Trainer}}"
 
-  - name: Principle of Inheritance
+  - name: Principle of Inheritance, Coming from PLAY Level.
     ansible.builtin.debug:
       msg: "Ongoing Course: {{Course}} with Trainer: {{Trainer}}"
