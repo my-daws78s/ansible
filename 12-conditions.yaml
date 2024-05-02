@@ -15,3 +15,53 @@
   - name: Printing last message
     ansible.builtin.debug:
       msg: "Hello this is end of message."
+
+# 1st execution:
+# [ ec2-user@ip-172-31-26-192 ~/ansible ]$ ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 12-conditions.yaml
+
+# PLAY [Command Module Usage] **********************************************************************************************************
+
+# TASK [Gathering Facts] ***************************************************************************************************************
+# ok: [localhost]
+
+# TASK [Check if user expense exists] **************************************************************************************************
+# fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["id", "expense"], "delta": "0:00:00.009421", "end": "2024-05-02 11:25:59.864977", "msg": "non-zero return code", "rc": 1, "start": "2024-05-02 11:25:59.855556", "stderr": "id: ‘expense’: no such user", "stderr_lines": ["id: ‘expense’: no such user"], "stdout": "", "stdout_lines": []}
+# ...ignoring
+
+# TASK [Print the USER information] ****************************************************************************************************
+# ok: [localhost] => {
+#     "msg": "USER Information: {'changed': True, 'stdout': '', 'stderr': 'id: ‘expense’: no such user', 'rc': 1, 'cmd': ['id', 'expense'], 'start': '2024-05-02 11:25:59.855556', 'end': '2024-05-02 11:25:59.864977', 'delta': '0:00:00.009421', 'failed': True, 'msg': 'non-zero return code', 'stdout_lines': [], 'stderr_lines': ['id: ‘expense’: no such user']}"
+# }
+
+# TASK [Create User Expense if that does not exist] ************************************************************************************
+# changed: [localhost]
+
+# TASK [Printing last message] *********************************************************************************************************
+# ok: [localhost] => {
+#     "msg": "Hello this is end of message."
+# }
+
+
+# 2nd execution:=================================================================================
+# [ ec2-user@ip-172-31-26-192 ~/ansible ]$ ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 12-conditions.yaml
+
+# PLAY [Command Module Usage] **********************************************************************************************************
+
+# TASK [Gathering Facts] ***************************************************************************************************************
+# ok: [localhost]
+
+# TASK [Check if user expense exists] **************************************************************************************************
+# changed: [localhost]
+
+# TASK [Print the USER information] ****************************************************************************************************
+# ok: [localhost] => {
+#     "msg": "USER Information: {'changed': True, 'stdout': 'uid=1002(expense) gid=1002(expense) groups=1002(expense)', 'stderr': '', 'rc': 0, 'cmd': ['id', 'expense'], 'start': '2024-05-02 11:26:18.244680', 'end': '2024-05-02 11:26:18.251994', 'delta': '0:00:00.007314', 'msg': '', 'stdout_lines': ['uid=1002(expense) gid=1002(expense) groups=1002(expense)'], 'stderr_lines': [], 'failed': False}"
+# }
+
+# TASK [Create User Expense if that does not exist] ************************************************************************************
+# skipping: [localhost]
+
+# TASK [Printing last message] *********************************************************************************************************
+# ok: [localhost] => {
+#     "msg": "Hello this is end of message."
+# }
