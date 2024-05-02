@@ -1,0 +1,18 @@
+- name: Testing Datatypes
+  hosts: localhost
+  vars:
+    COURSE: "DevOps" #String
+    TOOLS: #List
+    - Dockers
+    - K8s
+    - Terraform
+    Experience: #Map or Dictionary
+      Dockers: 2 #number
+      K8s: 1
+      Terraform: 3
+    Real_Project: true #boolean
+  tasks:
+  - name: Printing all data types assigned.
+    ansible.builtin.debug:
+      msg: "COURSE: {{COURSE}}, TOOLS: {{TOOLS}}, Experience is: {{Experience}}, Real_Project: {{Real_Project}}"
+
