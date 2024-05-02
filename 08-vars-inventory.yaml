@@ -6,7 +6,7 @@
       Timings: "7.15AM"
     ansible.builtin.debug:
       #msg: "Course is: {{Course}}, Trainer is: {{Trainer}}, Duration is: {{Duration}}, Timings are: {{Timings}}"
-      msg: {{Timings}}
+      msg: "{{Timings}}"
 
 
 #Output:
