@@ -1,0 +1,6 @@
+- name: variables from arguments/command line
+  hosts: localhost
+  tasks:
+  - name: Variable testing at task level
+    ansible.builtin.debug:
+      msg: "Hello {{Text1}}, Good {{}}."
