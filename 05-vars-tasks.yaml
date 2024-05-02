@@ -16,3 +16,21 @@
   - name: Principle of Inheritance, Coming from PLAY Level.
     ansible.builtin.debug:
       msg: "Ongoing Course: {{Course}} with Trainer: {{Trainer}}"
+
+
+#Output:
+
+# PLAY [Inheritane and Overriding Concept] *********************************************************************************************
+
+# TASK [Gathering Facts] ***************************************************************************************************************
+# ok: [172.31.21.180]
+
+# TASK [Principle of Overriding, considering variables from TASK level itself.] ********************************************************
+# ok: [172.31.21.180] => {
+#     "msg": "Ongoing Course: Terraform with Trainer: Murali"
+# }
+
+# TASK [Principle of Inheritance, Coming from PLAY Level.] *****************************************************************************
+# ok: [172.31.21.180] => {
+#     "msg": "Ongoing Course: Devops with Trainer: Siva"
+# }
