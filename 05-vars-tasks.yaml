@@ -1,0 +1,18 @@
+- name: Inheritane and Overriding Concept
+  hosts: web
+  vars:
+    Course: "Devops"
+    Trainer: "Siva"
+  
+  tasks: 
+  
+  - name: Principle of Overriding
+    vars:
+      Course: "Terraform"
+      Trainer: "Murali"
+    ansible.builtin.debug:
+      msg: "Ongoing Course: {{Course}} with Trainer: {{Trainer}}"
+
+  - name: Principle of Inheritance
+    ansible.builtin.debug:
+      msg: "Ongoing Course: {{Course}} with Trainer: {{Trainer}}"
