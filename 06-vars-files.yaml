@@ -7,4 +7,4 @@
     vars:
       DURATION: "120 hours"
     ansible.builtin.debug:
-      msg: "Course: {{Course}}, Trainer: {{Trainer}}"
+     msg: "Course: {{Course}}, Trainer: {{Trainer}}, Duration: {{Duration}}"
