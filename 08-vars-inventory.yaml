@@ -1,0 +1,8 @@
+- name: Testing variables inside inventory.ini file
+  hosts: localhost
+  tasks:
+  - name: Print info at task level
+    vars:
+      Timings: "7.15AM"
+    ansible.builtin.debug:
+      msg: "Course is: {{Course}}, Trainer is: {{Trainer}}, Duration is: {{Duration}}, Timings are: {{Timings}}"
