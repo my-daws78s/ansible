@@ -1,10 +1,10 @@
-- name: variables
+- name: variables defined at play level
   hosts: web
   vars:
     Trainer: "Siva"
     Duration: "120 weeks"
     Course: "DevOps and AWS"
   tasks:
-  - name: Print Information
+  - name: Prints information just from play level by default.
     ansible.builtin.debug:
       msg: "Hi we are doing a Course on {{Course}}, Trainer is: {{Trainer}}, Duration is: {{Duration}}"
