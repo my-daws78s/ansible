@@ -6,3 +6,17 @@
       Timings: "7.15AM"
     ansible.builtin.debug:
       msg: "Course is: {{Course}}, Trainer is: {{Trainer}}, Duration is: {{Duration}}, Timings are: {{Timings}}"
+
+
+#Output:
+# [ ec2-user@ip-172-31-28-238 ~/ansible ]$ ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 08-vars-inventory.yaml
+
+# PLAY [Testing variables inside inventory.ini file] ***********************************************************************************
+
+# TASK [Gathering Facts] ***************************************************************************************************************
+# ok: [172.31.21.180]
+
+# TASK [Print info at task level] ******************************************************************************************************
+# ok: [172.31.21.180] => {
+#     "msg": "Course is: Devops, Trainer is: Siva, Duration is: 3months, Timings are: 7.15AM"
+# }
