@@ -1,9 +1,9 @@
 - name: variables
   hosts: web
   vars:
-   Trainer: "Siva"
-   Duration: "120 weeks"
-   Course: "Devops"
+    Trainer: "Siva"
+    Duration: "120 weeks"
+    Course: "Devops"
   tasks:
   - name: Print Information
     ansible.builtin.debug:
