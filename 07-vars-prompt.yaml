@@ -1,6 +1,5 @@
 - name: Usage of vars_prompt
   hosts: web
-
   vars_prompt:
   - name: USERNAME
     prompt: Pls enter your Username
