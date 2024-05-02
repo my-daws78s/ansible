@@ -1,12 +1,16 @@
 - name: Command Module Usage
   hosts: localhost
   tasks:
-  - name: See if id expense exists
+  - name: Check if user expense exists
     ansible.builtin.command: id expense
     register: USER
     ignore_errors: true
   - name: Print the USER information
     ansible.builtin.debug:
       msg: "USER Information: {{USER}}"
-  #- name: Create User Expense if that does not exist
-    #ansible.builtin.command: useradd expense
+  - name: Create User Expense if that does not exist
+    ansible.builtin.command: useradd expense
+    when: USER.rc != 0 #condition
+  - name: Printing last message
+    ansible.builtin.debug:
+      msg: "Hello this is end of message."
