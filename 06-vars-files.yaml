@@ -3,7 +3,7 @@
   vars_files:
   - vars.yaml
   tasks:
-  - name: Inside TASK level
+  - name: Inside TASK level, including principles of Inheritance/Overriding
     vars:
       Duration: "120 hours"
     ansible.builtin.debug:
@@ -19,7 +19,7 @@
 # TASK [Gathering Facts] ***************************************************************************************************************
 # ok: [172.31.21.180]
 
-# TASK [Inside TASK level] *************************************************************************************************************
+# TASK [Inside TASK level, including principles of Inheritance/Overriding] *************************************************************************************************************
 # ok: [172.31.21.180] => {
-#     "msg": "Course: Devops, Trainer: Siva, Duration: 3months"
+#     "msg": "Course: Devops, Trainer: Siva, Duration: 120 hours"
     
