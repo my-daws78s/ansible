@@ -1,6 +1,7 @@
 -name: install and run nginx
  hosts: web
  tasks:
-  -name: Install nginx
-   ansible.builtin.dnf:
-   state: present
+ -name: Install nginx
+  ansible.builtin.dnf:
+  name: nginx
+  state: present
