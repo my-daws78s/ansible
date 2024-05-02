@@ -4,3 +4,22 @@
   - name: Variable testing at task level
     ansible.builtin.debug:
       msg: "Hello {{Text1}}, Good {{Text2}}."
+
+
+#Output:
+# [ ec2-user@ip-172-31-26-192 ~/ansible ]$ ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 09-vars-args.yaml -e Text1=Murali -e Text2=Morning
+
+# PLAY [variables from arguments/command line] *****************************************************************************************
+
+# TASK [Gathering Facts] ***************************************************************************************************************
+# ok: [localhost]
+
+# TASK [Variable testing at task level] ************************************************************************************************
+# ok: [localhost] => {
+#     "msg": "Hello Murali, Good Morning."
+# }
+
+#3 ways of passing arguments:
+# -e "Text1=Ramesh Text2=Morning" or 
+# -e Text1=Ramesh -e Text2=Morning or
+# --extra-vars "Text1=Ramesh Text2=Morning"

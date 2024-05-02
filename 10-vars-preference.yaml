@@ -1,0 +1,16 @@
+- name: Testing variable preference at Play/Task/Arg/Var/Varfile/Inventory/Prompt levels
+  hosts: localhost
+  vars:
+    WISHES: Morning from PLAY variable.
+  vars_files:
+  - vars.file
+  vars_prompt:
+  - name: WISHES
+    prompt: Pls enter your Wishes
+    private: false
+  tasks:
+  - name: Test inside Task level
+    vars:
+      WISHES: Morning from TASK variable
+    ansible.builtin.debug:
+      msg: "{{WISHES}}"
