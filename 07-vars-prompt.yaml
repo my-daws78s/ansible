@@ -1,11 +1,12 @@
 - name: Usage of vars_prompt
   hosts: web
+
   vars_prompt:
   - name: USERNAME
     prompt: Pls enter your Username
     private: false
   - name: PASSWORD
-    promt: Pls enter your Password
+    prompt: Pls enter your Password
     private: true
   
   tasks:
