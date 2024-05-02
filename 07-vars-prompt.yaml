@@ -14,3 +14,19 @@
     ansible.builtin.debug:
       msg: "Username is: {{USERNAME}} and Password is: {{PASSWORD}}"
   
+
+  #Output:
+
+# [ ec2-user@ip-172-31-28-238 ~/ansible ]$ ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 07-vars-prompt.yaml
+# Pls enter your Username: Murali Krishna
+# Pls enter your Password:
+
+# PLAY [Usage of vars_prompt] **********************************************************************************************************
+
+# TASK [Gathering Facts] ***************************************************************************************************************
+# ok: [172.31.21.180]
+
+# TASK [Task level printing information] ***********************************************************************************************
+# ok: [172.31.21.180] => {
+#     "msg": "Username is: Murali Krishna and Password is: Krishna@123"
+# }
