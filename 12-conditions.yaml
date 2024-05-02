@@ -1,5 +1,6 @@
 - name: Command Module Usage
   hosts: localhost
+  become: yes
   tasks:
   - name: Check if user expense exists
     ansible.builtin.command: id expense
