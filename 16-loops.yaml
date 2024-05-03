@@ -10,3 +10,16 @@
     - mysql
     - ansible
     - docker
+
+# [ ec2-user@ip-172-31-27-147 ~/ansible ]$ ansible-playbook 16-loops.yaml
+# [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+# PLAY [Installing Packages] ***********************************************************************************************************
+
+# TASK [Gathering Facts] ***************************************************************************************************************
+# ok: [localhost]
+
+# TASK [Install below all softwares] ***************************************************************************************************
+# changed: [localhost] => (item=mysql)
+# ok: [localhost] => (item=ansible)
+# changed: [localhost] => (item=docker)

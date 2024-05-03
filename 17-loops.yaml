@@ -1,0 +1,12 @@
+- name: Modifying Packages
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: Install and Uninstall Package
+    ansible.builtin.dnf:
+      name: "{{item.name}}"
+      state: "{{item.state}}"
+    loop:
+    - {name: mysql, state: absent}
+    - {name: ansible, state: present}
+    - {name: docker, state: absent}
