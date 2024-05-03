@@ -12,4 +12,13 @@
     vars:
       greeting: "How are you doing buddy?"
     ansible.builtin.debug:
-      msg: "{{greeting | upper}}"      
+      msg: "{{greeting | upper}}"
+
+- name: lower case
+  hosts: localhost
+  vars:
+    - greeting: "I AM DOING GREAT..."
+  tasks:
+    - name: converting to lower case
+      ansible.builtin.debug:
+        msg:  ""{{greeting | lower}}"
