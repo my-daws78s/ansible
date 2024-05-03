@@ -4,6 +4,9 @@
   - name: printing default value
     ansible.builtin.debug:
       msg:  "Hello, Good {{MESSAGE  | default('Morning')  }}"
+# {
+#     "msg": "Hello, Good Morning"
+# }      
 
 - name: upper case
   hosts: localhost
@@ -13,7 +16,10 @@
       greeting: "How are you doing buddy?"
     ansible.builtin.debug:
       msg: "{{greeting | upper}}"
-
+# {
+#     "msg": "HOW ARE YOU DOING BUDDY?"
+# }
+    
 - name: lower case
   hosts: localhost
   vars:
@@ -22,6 +28,9 @@
     - name: converting to lower case
       ansible.builtin.debug:
         msg:  "{{greeting | lower}}"
+# {
+#     "msg": "i am doing great..."
+# }
 
 - name: minimum and maximum values
   hosts: localhost
@@ -31,6 +40,9 @@
   - name: printing min and max age
     ansible.builtin.debug:
       msg:  "Min Age is {{ages  | min}}, Max Age is {{ages  | max}}" 
+# {
+#     "msg": "Min Age is 20, Max Age is 78"
+# }
 
 - name: remove duplicates
   hosts: localhost
@@ -40,3 +52,25 @@
   - name: duplicate removal using unique keyword
     ansible.builtin.debug:
       msg:  "{{duplicates |  unique}}"
+# {
+#     "msg": [
+#         1,
+#         4,
+#         6,
+#         7,
+#         8
+#     ]
+# }
+
+- name: dictionary to items
+  hosts: localhost
+  vars:
+    my_dict:
+      Course: Ansible
+      Trainer: Siva
+      Duration: 120hrs
+  tasks:
+  - name: converting map to list
+    ansible.builtin.debug:
+      msg: "Before converting: {{my_dict}}"
+      msg: "After converting: {{my_dict | dict2items}}"
