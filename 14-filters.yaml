@@ -21,4 +21,4 @@
   tasks:
     - name: converting to lower case
       ansible.builtin.debug:
-        msg:  ""{{greeting | lower}}"
+        msg:  "{{greeting | lower}}"
