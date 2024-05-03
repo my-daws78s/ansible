@@ -39,4 +39,4 @@
   tasks:
   - name: duplicate removal using unique keyword
     ansible.builtin.debug:
-      msg:  {{duplicates |  unique}}    
+      msg:  "{{duplicates |  unique}}"
