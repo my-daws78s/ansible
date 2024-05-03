@@ -1,0 +1,6 @@
+- name: print default value
+  hosts: localhost
+  tasks:
+  - name: printing default value
+    ansible.builtin.debug:
+      msg:  "Hello, Good {{MESSAGE  | default('Morning')  }}"

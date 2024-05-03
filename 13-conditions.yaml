@@ -13,3 +13,7 @@
     ansible.builtin.debug:
       msg: "Given number {{number}} is greater than or equal to 10."
     when: number | int >= 10
+
+
+#Output:
+#If you give string/text in place of number it takes it as zero by default and gives output.
