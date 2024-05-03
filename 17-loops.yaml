@@ -10,3 +10,9 @@
     - {name: mysql, state: present}
     - {name: ansible, state: present}
     - {name: docker, state: absent}
+
+
+# TASK [Install and Uninstall Package] *************************************************************************************************
+# changed: [localhost] => (item={'name': 'mysql', 'state': 'absent'})
+# ok: [localhost] => (item={'name': 'ansible', 'state': 'present'})
+# changed: [localhost] => (item={'name': 'docker', 'state': 'absent'})
