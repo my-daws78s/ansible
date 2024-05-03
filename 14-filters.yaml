@@ -35,7 +35,7 @@
 - name: remove duplicates
   hosts: localhost
   vars:
-    - duplicates [1,1,4,4,6,7,8,8]      
+    - duplicates: [1,1,4,4,6,7,8,8]      
   tasks:
   - name: duplicate removal using unique keyword
     ansible.builtin.msg:
