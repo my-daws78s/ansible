@@ -8,3 +8,23 @@
     - Linux
     - Shell
     - Ansible
+
+# [ ec2-user@ip-172-31-27-147 ~/ansible ]$ ansible-playbook 15-loops.yaml
+# [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+# PLAY [Learning Loops] ****************************************************************************************************************
+
+# TASK [Gathering Facts] ***************************************************************************************************************
+# ok: [localhost]
+
+# TASK [loops] *************************************************************************************************************************
+# ok: [localhost] => (item=Linux) => {
+#     "msg": "Hello Linux"
+# }
+# ok: [localhost] => (item=Shell) => {
+#     "msg": "Hello Shell"
+# }
+# ok: [localhost] => (item=Ansible) => {
+#     "msg": "Hello Ansible"
+# }
+

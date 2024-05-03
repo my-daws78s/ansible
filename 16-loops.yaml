@@ -1,0 +1,11 @@
+- name: Installing Packages
+  hosts:  localhost
+  tasks:
+  - name: Install below all softwares
+    ansible.builtin.dnf:
+      name: "{{item}}"
+      state: present
+    loop:
+    - mysql
+    - ansible
+    - docker
